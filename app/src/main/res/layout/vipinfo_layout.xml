@@ -1,0 +1,257 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.weilay.pos.percent.PercentRelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#539BE5" >
+
+    <com.weilay.pos.util.RotateTextView
+        android:id="@+id/vip_hint"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_margin="5dp"
+        android:ellipsize="marquee"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        android:gravity="left|center_vertical"
+        android:marqueeRepeatLimit="marquee_forever"
+        android:scrollHorizontally="true"
+        android:singleLine="true"
+        android:textColor="@color/white"
+        android:textSize="25sp" >
+    </com.weilay.pos.util.RotateTextView>
+
+    <com.weilay.pos.percent.PercentFrameLayout
+        android:id="@+id/pfl_1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/vip_hint"
+        android:layout_margin="10dp" >
+
+        <com.weilay.pos.percent.PercentRelativeLayout
+            android:id="@+id/prl_1"
+            android:layout_width="match_parent"
+            app:layout_heightPercent="35%"
+            app:layout_marginTopPercent="5%"
+            android:background="@drawable/vipinfo_vip" >
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="20dp" >
+
+                <TextView
+                    android:id="@+id/vipinfo_type"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_above="@+id/ll_line"
+                    android:layout_marginBottom="10dp"
+                    android:layout_marginLeft="10dp"
+                    android:text="普通卡"
+                    android:textSize="28dp" />
+
+                <TextView
+                    android:id="@+id/vipinfo_discount"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_above="@+id/ll_line"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginBottom="10dp"
+                    android:layout_marginRight="10dp"
+                    android:text="折扣"
+                    android:textSize="28dp" />
+
+                <LinearLayout
+                    android:id="@+id/ll_line"
+                    android:layout_width="match_parent"
+                    android:layout_height="5dp"
+                    android:layout_above="@+id/vipinfo_amount"
+                    android:layout_marginBottom="25dp"
+                    android:background="@drawable/dotted_line_2"
+                    android:orientation="horizontal" >
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/vipinfo_amount"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginBottom="10dp"
+                    android:layout_marginLeft="10dp"
+                    android:text="100"
+                    android:textSize="25dp" />
+
+                <TextView
+                    android:id="@+id/vipinfo_integral"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginBottom="10dp"
+                    android:layout_marginRight="10dp"
+                    android:text="积分"
+                    android:textSize="25dp"
+                    android:visibility="invisible" />
+            </RelativeLayout>
+        </com.weilay.pos.percent.PercentRelativeLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:gravity="center"
+            android:orientation="vertical" >
+
+            <ImageView
+                android:id="@+id/vipinfo_merchantlogo"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:background="@color/black"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:text="会员卡"
+                android:textColor="@color/green1"
+                android:textSize="30dp" />
+        </LinearLayout>
+    </com.weilay.pos.percent.PercentFrameLayout>
+
+    <TextView
+        android:id="@+id/empty_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/pll_1"
+        android:layout_below="@+id/pfl_1"
+        android:layout_centerHorizontal="true"
+        android:text="没有优惠券"
+        android:textColor="@color/white"
+        android:textSize="30sp" >
+    </TextView>
+
+    <ListView
+        android:id="@+id/vipinfo_listview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/member_pay_ll"
+        android:layout_below="@+id/pfl_1"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:minHeight="150dp" >
+    </ListView>
+
+    <RelativeLayout
+        android:id="@+id/member_pay_ll"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/pll_1"
+        android:alpha="0.8"
+        android:background="@color/black"
+        android:orientation="horizontal"
+        android:padding="5dp" >
+	<TextView
+            android:id="@+id/amount_should_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="4dp"
+            android:layout_alignParentLeft="true"
+            android:text="应付:"
+            android:textColor="@color/white"
+            android:textSize="22sp" />
+
+        <TextView
+            android:id="@+id/amount_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_toRightOf="@+id/amount_should_tv"
+            android:layout_alignParentBottom="@+id/amount_should_tv"
+            android:text="0"
+            android:textColor="@color/blue1"
+            android:textSize="22sp" />
+        <TextView
+            android:id="@+id/mofidy_title_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="8dp"
+            android:layout_toRightOf="@+id/amount_tv"
+            android:text="会员可折："
+            android:textColor="@color/white"
+            android:textSize="22sp" />
+
+        <TextView
+            android:id="@+id/modify_discount_money_tv"
+            
+            android:layout_width="wrap_content"
+            android:layout_height="35dp"
+            android:layout_alignBottom="@+id/mofidy_title_tv"
+            android:layout_toRightOf="@+id/mofidy_title_tv"
+            android:background="@drawable/edit_bg_small"
+            android:gravity="center"
+            android:text="0"
+            android:textColor="@color/red"
+            android:textSize="22sp" />
+ 		<TextView
+            android:id="@+id/modify_unit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="8dp"
+            android:layout_toRightOf="@+id/modify_discount_money_tv"
+            android:text="元"
+            android:textColor="@color/white"
+            android:textSize="22sp" />
+        
+        
+
+        <View
+            android:id="@+id/line"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_below="@+id/mofidy_title_tv"
+            android:layout_margin="4dp"
+            android:background="@color/gray" />
+
+        
+        <TextView
+            android:id="@+id/member_prefer_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+             android:layout_below="@+id/line"
+            android:text="会员优惠:0元"
+            android:textColor="@color/green1"
+            android:textSize="22sp" />
+
+        <TextView
+            android:id="@+id/coupon_prefer_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_toRightOf="@+id/member_prefer_tv"
+            android:layout_below="@+id/line"
+            android:text="优惠券:0元"
+            android:textColor="@color/red_hight"
+            android:textSize="22sp" />
+    </RelativeLayout>
+
+    <com.weilay.pos.percent.PercentLinearLayout
+        android:id="@+id/pll_1"
+        android:layout_width="match_parent"
+        android:layout_alignParentBottom="true"
+        app:layout_heightPercent="10%" >
+
+        <TextView
+            android:id="@+id/vipinfo_enter"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/but_select_blue"
+            android:gravity="center"
+            android:text="会员卡支付"
+            android:textColor="@color/white"
+            android:textSize="22dp" />
+    </com.weilay.pos.percent.PercentLinearLayout>
+
+</com.weilay.pos.percent.PercentRelativeLayout>

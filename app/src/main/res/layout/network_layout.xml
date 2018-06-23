@@ -1,0 +1,46 @@
+<com.weilay.pos.percent.PercentRelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <com.weilay.pos.percent.PercentRelativeLayout
+        android:id="@+id/rl_main"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" >
+
+        <ImageView
+            android:id="@+id/wangluoxinxi_iv"
+            android:layout_margin="3dp"
+            app:layout_heightPercent="33%"
+            app:layout_widthPercent="49%"
+            android:scaleType="fitXY"
+            android:src="@drawable/network_information" />
+
+        <ImageView
+            android:id="@+id/wangluopeizhi_iv"
+            android:layout_width="0dp"
+            android:layout_marginBottom="3dp"
+            android:layout_marginRight="3dp"
+            android:layout_marginTop="3dp"
+            android:layout_toRightOf="@+id/wangluoxinxi_iv"
+            app:layout_heightPercent="33%"
+            app:layout_widthPercent="49.9%"
+            android:scaleType="fitXY"
+            android:src="@drawable/network_configuration" />
+
+        <ImageView
+            android:id="@+id/wangluozhenduan_iv"
+            android:layout_below="@+id/wangluopeizhi_iv"
+            android:layout_marginBottom="3dp"
+            android:layout_marginLeft="3dp"
+            android:layout_marginRight="3dp"
+            app:layout_heightPercent="33%"
+            app:layout_widthPercent="49%"
+            android:scaleType="fitXY"
+            android:src="@drawable/icon_network_check" />
+
+        
+    </com.weilay.pos.percent.PercentRelativeLayout>
+
+</com.weilay.pos.percent.PercentRelativeLayout>

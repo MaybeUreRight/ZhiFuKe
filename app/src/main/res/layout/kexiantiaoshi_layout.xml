@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.weilay.pos.percent.PercentRelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <RelativeLayout
+        android:id="@+id/rl_1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" >
+
+        <TextView
+            android:id="@+id/duankou_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_margin="10dp"
+            android:text="串口:"
+            android:textSize="30sp" />
+
+        <Spinner
+            android:id="@+id/duankou_spinner"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:layout_toRightOf="@+id/duankou_tv" />
+    </RelativeLayout>
+
+    <View
+        android:layout_above="@+id/kexian_begin_tv"
+        android:id="@+id/view_view"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+       android:layout_margin="1dp"
+        android:background="@color/black" />
+
+    <TextView
+        android:id="@+id/kexian_begin_tv"
+        android:layout_width="match_parent"
+        android:layout_margin="10dp"
+        app:layout_heightPercent="11%"
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/round_red"
+        android:textColor="@color/white"
+        android:textSize="25sp"
+        android:gravity="center"
+        android:text="开始调试" />
+
+</com.weilay.pos.percent.PercentRelativeLayout>

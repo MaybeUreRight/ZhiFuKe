@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <TextView
+        android:id="@+id/empty_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_alignParentTop="true"
+        android:textSize="30sp"
+        android:layout_centerHorizontal="true"
+        android:text="没有可用wifi"
+        android:textColor="@color/gray" >
+    </TextView>
+
+    <ListView
+        android:id="@+id/wifi_listview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/ll_2" >
+    </ListView>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_above="@+id/ll_2"
+        android:background="@color/gray" />
+
+    <com.weilay.pos.percent.PercentLinearLayout
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/ll_2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_margin="5dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:orientation="vertical" >
+
+        <TextView
+            android:id="@+id/wifi_shuaxin"
+            android:layout_width="match_parent"
+            android:layout_alignParentBottom="true"
+            android:layout_margin="5dp"
+            app:layout_heightPercent="11%"
+            android:background="@drawable/round_red"
+            android:gravity="center"
+            android:text="刷新网络"
+            android:textColor="@color/white"
+            android:textSize="30sp" />
+    </com.weilay.pos.percent.PercentLinearLayout>
+
+</RelativeLayout>

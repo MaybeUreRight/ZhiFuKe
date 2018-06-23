@@ -1,0 +1,77 @@
+<com.weilay.pos.percent.PercentRelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <com.weilay.pos.percent.PercentRelativeLayout
+        android:id="@+id/rl_main"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" >
+
+        <ImageView
+            android:id="@+id/shebeixinxi_iv"
+            android:layout_margin="3dp"
+            app:layout_heightPercent="33%"
+            app:layout_widthPercent="49%"
+            android:scaleType="fitXY"
+            android:src="@drawable/icon_info" />
+
+        <ImageView
+            android:id="@+id/shebeizhuangtai_iv"
+            android:layout_width="0dp"
+            android:layout_marginBottom="3dp"
+            android:layout_marginRight="3dp"
+            android:layout_marginTop="3dp"
+            android:layout_toRightOf="@+id/shebeixinxi_iv"
+            app:layout_heightPercent="33%"
+            app:layout_widthPercent="49.9%"
+            android:scaleType="fitXY"
+            android:src="@drawable/icon_state" />
+
+        <ImageView
+            android:id="@+id/xitonggengxin_iv"
+            android:layout_below="@+id/shebeizhuangtai_iv"
+            android:layout_marginBottom="3dp"
+            android:layout_marginLeft="3dp"
+            android:layout_marginRight="3dp"
+            app:layout_heightPercent="33%"
+            app:layout_widthPercent="49%"
+            android:scaleType="fitXY"
+            android:src="@drawable/icon_system_update" />
+
+        <ImageView
+            android:id="@+id/wangluoguanli_iv"
+            android:layout_below="@+id/shebeizhuangtai_iv"
+            android:layout_marginBottom="3dp"
+            android:layout_marginRight="3dp"
+            android:layout_toRightOf="@+id/xitonggengxin_iv"
+            app:layout_heightPercent="33%"
+            app:layout_widthPercent="49.9%"
+            android:scaleType="fitXY"
+            android:src="@drawable/icon_network" />
+
+        <ImageView
+            android:id="@+id/shebeijiance_iv"
+            android:layout_below="@+id/wangluoguanli_iv"
+            android:layout_marginBottom="3dp"
+            android:layout_marginLeft="3dp"
+            android:layout_marginRight="3dp"
+            app:layout_heightPercent="33%"
+            app:layout_widthPercent="49%"
+            android:scaleType="fitXY"
+            android:src="@drawable/icon_device" />
+
+        <ImageView
+            android:id="@+id/dayinshezhi_iv"
+            android:layout_below="@+id/wangluoguanli_iv"
+            android:layout_marginBottom="3dp"
+            android:layout_marginRight="3dp"
+            android:layout_toRightOf="@+id/shebeijiance_iv"
+            app:layout_heightPercent="33%"
+            app:layout_widthPercent="49.9%"
+            android:scaleType="fitXY"
+            android:src="@drawable/equipment_management" />
+    </com.weilay.pos.percent.PercentRelativeLayout>
+
+</com.weilay.pos.percent.PercentRelativeLayout>

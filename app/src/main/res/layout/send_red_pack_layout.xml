@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <TextView
+        android:id="@+id/sendredpack_info"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:text="找零信息"
+     android:textColor="@color/black1"
+        android:textSize="28sp" />
+
+    <TextView
+        android:id="@+id/sendredpack_dh"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/sendredpack_info"
+        android:layout_centerInParent="true"
+        android:layout_marginTop="5dp"
+        android:text="找零订单号:"
+     android:textColor="@color/black1"
+        android:textSize="28sp" />
+
+    <TextView
+        android:id="@+id/sendredpack_danhao"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/sendredpack_dh"
+        android:layout_centerInParent="true"
+        android:layout_marginTop="5dp"
+        android:text=""
+       android:textColor="@color/black1"
+        android:textSize="28sp" />
+
+    <TextView
+        android:id="@+id/sendredpack_jine"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/sendredpack_danhao"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="5dp"
+        android:text="找零总额:"
+        android:textColor="@color/black1"
+        android:textSize="28sp" />
+
+    <ImageView
+        android:id="@+id/pack_qr"
+        android:layout_width="280dp"
+        android:layout_height="280dp"
+        android:layout_below="@+id/sendredpack_jine"
+        android:layout_centerHorizontal="true"
+        android:padding="5dp" />
+
+    <TextView
+        android:id="@+id/sendredpack_print"
+        android:layout_width="match_parent"
+        android:layout_height="65dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:background="@drawable/but_select_blue"
+        android:gravity="center"
+        android:text="打印"
+     android:textColor="@color/white"
+        android:textSize="35sp" />
+
+</RelativeLayout>

@@ -1,0 +1,140 @@
+<com.weilay.pos.percent.PercentRelativeLayout xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <TextView
+        android:id="@+id/networkinfo_type"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_margin="5dp"
+        android:text="当前网络连接方式为:WIFI"
+        android:textSize="25sp" />
+
+    <com.weilay.pos.percent.PercentRelativeLayout
+        android:id="@+id/rl_1"
+        android:layout_width="match_parent"
+        android:layout_below="@+id/networkinfo_type"
+        app:layout_heightPercent="16%" >
+
+        <ImageView
+            android:id="@+id/ipaddress_iv"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            app:layout_widthPercent="40%"
+            android:src="@drawable/ipaddress" />
+
+        <TextView
+            android:id="@+id/networkinfo_ip"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_marginLeft="5dp"
+            android:layout_toRightOf="@+id/ipaddress_iv"
+            android:gravity="center"
+            android:text="192.168.1.1"
+            android:textSize="25sp" />
+    </com.weilay.pos.percent.PercentRelativeLayout>
+
+    <com.weilay.pos.percent.PercentRelativeLayout
+        android:id="@+id/rl_2"
+        android:layout_width="match_parent"
+        android:layout_below="@+id/rl_1"
+        app:layout_heightPercent="16%" >
+
+        <ImageView
+            android:id="@+id/netmask_iv"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            app:layout_widthPercent="40%"
+            android:src="@drawable/netmask" />
+
+        <TextView
+            android:id="@+id/networkinfo_netmask"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_marginLeft="5dp"
+            android:layout_toRightOf="@+id/netmask_iv"
+            android:gravity="center"
+            android:text="192.168.1.1"
+            android:textSize="25sp" />
+    </com.weilay.pos.percent.PercentRelativeLayout>
+
+    <com.weilay.pos.percent.PercentRelativeLayout
+        android:id="@+id/rl_3"
+        android:layout_width="match_parent"
+        android:layout_below="@+id/rl_2"
+        app:layout_heightPercent="16%" >
+
+        <ImageView
+            android:id="@+id/gateway_iv"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            app:layout_widthPercent="40%"
+            android:src="@drawable/gateway" />
+
+        <TextView
+            android:id="@+id/networkinfo_gateway"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_marginLeft="5dp"
+            android:layout_toRightOf="@+id/gateway_iv"
+            android:gravity="center"
+            android:text="192.168.1.1"
+            android:textSize="25sp" />
+    </com.weilay.pos.percent.PercentRelativeLayout>
+
+    <com.weilay.pos.percent.PercentRelativeLayout
+        android:id="@+id/rl_4"
+        android:layout_width="match_parent"
+        android:layout_below="@+id/rl_3"
+        app:layout_heightPercent="16%" >
+
+        <ImageView
+            android:id="@+id/dns1_iv"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            app:layout_widthPercent="40%"
+            android:src="@drawable/dns1" />
+
+        <TextView
+            android:id="@+id/networkinfo_dns1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_marginLeft="5dp"
+            android:layout_toRightOf="@+id/dns1_iv"
+            android:gravity="center"
+            android:text="192.168.1.1"
+            android:textSize="25sp" />
+    </com.weilay.pos.percent.PercentRelativeLayout>
+
+    <com.weilay.pos.percent.PercentRelativeLayout
+        android:id="@+id/rl_5"
+        android:layout_width="match_parent"
+        android:layout_below="@+id/rl_4"
+        app:layout_heightPercent="16%" >
+
+        <ImageView
+            android:id="@+id/dns2_iv"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            app:layout_widthPercent="40%"
+            android:src="@drawable/dns2" />
+
+        <TextView
+            android:id="@+id/networkinfo_dns2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_marginLeft="5dp"
+            android:layout_toRightOf="@+id/dns2_iv"
+            android:gravity="center"
+            android:text="192.168.1.1"
+            android:textSize="25sp" />
+    </com.weilay.pos.percent.PercentRelativeLayout>
+
+</com.weilay.pos.percent.PercentRelativeLayout>

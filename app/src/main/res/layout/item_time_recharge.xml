@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="100dp"
+    android:background="@drawable/bg_line_shane" >
+
+    <ImageView
+        android:id="@+id/vip_icon"
+        android:layout_width="80dp"
+        android:layout_height="match_parent"
+        android:src="@drawable/time_vip_icon" >
+    </ImageView>
+
+    <LinearLayout
+        android:layout_toRightOf="@+id/vip_icon"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical" >
+
+        <TextView
+            android:id="@+id/time_tv"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:gravity="center_vertical"
+            android:textColor="@color/gray"
+            android:textSize="24dp"
+            android:text="0次" />
+
+        <TextView
+            android:id="@+id/expdate_tv"
+            android:layout_weight="1"
+             android:gravity="center_vertical"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:textColor="@color/gray"
+            android:textSize="24dp"
+            android:text="有效期：永久" />
+    </LinearLayout>
+
+    <TextView
+        android:layout_alignParentTop="true"
+      	android:layout_alignParentRight="true"
+        android:id="@+id/money_tv"
+        android:layout_marginTop="10dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="0.01元"
+        android:textSize="24dp"
+        android:textColor="@color/black" />
+
+</RelativeLayout>

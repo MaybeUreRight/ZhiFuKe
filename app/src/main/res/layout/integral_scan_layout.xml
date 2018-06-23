@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F2B33D"
+    android:orientation="vertical" >
+
+    <TextView
+        android:id="@+id/jifen_san_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="80dp"
+        android:text="会员号:"
+        android:textColor="@color/white"
+        android:textSize="40sp" />
+
+    <TextView
+        android:id="@+id/jifen_vipcode"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/jifen_san_tv"
+        android:layout_centerInParent="true"
+        android:layout_marginTop="5dp"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        android:text=""
+        android:textColor="@color/white"
+        android:textSize="40sp" />
+
+    <EditText
+        android:id="@+id/jifen_et"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/jifen_vipcode"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="5dp"
+        android:gravity="center"
+        android:hint="请输入积分"
+        android:textSize="30sp" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/pll_1" >
+
+        <android.inputmethodservice.KeyboardView
+            android:id="@+id/keyboard_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:background="@color/white"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:keyBackground="@drawable/btn_keyboard_key"
+            android:keyTextColor="@color/black"
+            android:shadowColor="@color/black"
+            android:shadowRadius="0.0"
+            android:visibility="gone" />
+    </RelativeLayout>
+
+    <com.weilay.pos.percent.PercentLinearLayout
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/pll_1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true" >
+
+        <TextView
+            android:id="@+id/jifen_scan_enter"
+            android:layout_width="match_parent"
+
+            android:layout_margin="10dp"
+            android:background="@drawable/but_select_blue"
+            android:gravity="center"
+             app:layout_heightPercent="13%"
+            android:text="确定"
+            android:textColor="@color/white"
+            android:textSize="40sp" />
+    </com.weilay.pos.percent.PercentLinearLayout>
+
+</RelativeLayout>

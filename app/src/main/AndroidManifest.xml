@@ -1,0 +1,231 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.weilay.pos">
+    <!--<uses-permission android:name="android.permission.WRITE_SECURE_SETTINGS" />  -->
+    <uses-permission android:name="android.permission.READ_SECURE_SETTINGS" />
+    <uses-permission android:name="android.permission.READ_SETTINGS" />
+    <uses-permission android:name="android.permission.WRITE_SETTINGS" />
+
+    <uses-feature android:name="android.hardware.usb.host" />
+
+    <uses-permission android:name="android.permission.GET_TASKS" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+
+    <uses-feature android:name="android.hardware.camera" />
+    <uses-feature android:name="android.hardware.camera.autofocus" />
+
+    <uses-permission android:name="android.permission.GET_TASKS" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.READ_LOGS" />
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.FLASHLIGHT" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.CHANGE_NETWORK_STATE" />
+    <!-- 		允许程序改变网络链接状态 -->
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" /> <!-- 允许程序访问访问WIFI网络状态信息 -->
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+    <!-- 		允许程序改变WIFI链接状态 -->
+    <!-- 获取手机录音机使用权限，听写、识别、语义理解需要用到此权限 -->
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <meta-data
+            android:name="com.alibaba.app.appkey"
+            android:value="23480904" />
+        <meta-data
+            android:name="com.alibaba.app.appsecret"
+            android:value="7b3a45f96077eb178074a0c0e3ab6dc1" />
+
+        <service
+            android:name="com.weilay.pos.service.WeilayService"
+            android:enabled="true"
+            android:exported="true"></service>
+
+        <receiver android:name="com.weilay.pos.app.BroadcastStart">
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED"></action>
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </receiver>
+
+        <activity
+            android:name="com.weilay.pos.LoginActivity"
+            android:clearTaskOnLaunch="true"
+            android:configChanges="orientation|screenSize"
+            android:excludeFromRecents="true"
+            android:label="@string/app_name"
+            android:launchMode="singleTop"
+            android:screenOrientation="landscape"
+            android:stateNotNeeded="true"
+            android:windowSoftInputMode="stateHidden">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+                <category android:name="android.intent.category.MONKEY" />
+                <category android:name="android.intent.category.HOME" />
+                <category android:name="android.intent.category.MONKEY" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.weilay.pos.StartActivity"
+            android:label="@string/app_name"
+            android:windowSoftInputMode="stateHidden"/>
+        <activity
+            android:name="com.weilay.pos.ChargeOffActivity"
+            android:label="@string/app_name"/>
+        <activity
+            android:name="com.weilay.pos.PrintActivity"
+            android:label="@string/app_name"/>
+        <activity
+            android:name="com.weilay.pos.VerificationSheetActivity"
+            android:label="@string/app_name"
+            android:windowSoftInputMode="stateHidden"/>
+        <activity
+            android:name="com.weilay.pos.ShiftActivity"
+            android:label="@string/app_name"
+            android:windowSoftInputMode="stateHidden"/>
+        <activity
+            android:name="com.weilay.pos.MoreActivity"
+            android:label="@string/app_name"/>
+        <activity
+            android:name="com.weilay.pos.EquipmentManagementActivity"
+            android:label="@string/app_name"/>
+        <activity
+            android:name="com.weilay.pos.DetectionActivity"
+            android:label="@string/app_name"/>
+        <activity
+            android:name="com.weilay.pos.NetWorkActivity"
+            android:label="@string/app_name"/>
+        <activity
+            android:name="com.weilay.pos.NetworkTestActivity"
+            android:label="@string/app_name"/>
+        <activity
+            android:name="com.weilay.pos.PayActivity"
+            android:label="@string/app_name"/>
+        <activity
+            android:name="com.weilay.pos.SucceedActivity"
+            android:label="@string/app_name"/>
+        <activity
+            android:name="com.weilay.pos.MainActivity"
+            android:label="@string/app_name"/>
+        <activity
+            android:name="com.weilay.pos.RefundActivity"
+            android:label="@string/app_name"/>
+        <activity
+            android:name="com.weilay.pos.SendRedPackInputActivity"
+            android:label="@string/app_name"/>
+        <activity
+            android:name="com.weilay.pos.SendRedPackActivity"
+            android:label="@string/app_name"/>
+        <activity
+            android:name="com.weilay.pos.MenDianActivity"
+            android:label="@string/app_name"/>
+        <activity
+            android:name="com.weilay.pos.ShiftRecordActivity"
+            android:label="@string/app_name"/>
+        <activity
+            android:name="com.weilay.pos.WeiLayAdvertisementActivity"
+            android:label="@string/app_name"/>
+        <activity
+            android:name="com.weilay.pos.WiredNetWorkActivity"
+            android:label="@string/app_name"/>
+        <activity
+            android:name="com.weilay.pos.ImportIPActivity"
+            android:label="@string/app_name"/>
+        <activity
+            android:name="com.weilay.pos.NetWorkDeployActivity"
+            android:label="@string/app_name"/>
+        <activity
+            android:name="com.weilay.pos.WifiActivity"
+            android:label="@string/app_name"/>
+        <activity
+            android:name="com.weilay.pos.NetworkInfoActivity"
+            android:label="@string/app_name"/>
+        <activity
+            android:name="com.weilay.pos.EquipmentInfoActivity"
+            android:label="@string/app_name"/>
+        <activity
+            android:name="com.weilay.pos.KeXianTiaoShiActivity"
+            android:label="@string/app_name"/>
+        <activity
+            android:name="com.weilay.pos.CheckOutActivity"
+            android:label="@string/app_name"/>
+        <activity
+            android:name="com.weilay.pos.RefundPrintActivity"
+            android:label="@string/app_name"/>
+        <activity
+            android:name="com.weilay.pos.JoinVipActivity"
+            android:label="@string/app_name"/>
+        <activity
+            android:name="com.weilay.pos.IntegralSanActivity"
+            android:label="@string/app_name"/>
+        <activity
+            android:name="com.weilay.pos.EquipmentState"
+            android:label="@string/app_name"/>
+        <activity
+            android:name="com.weilay.pos.PrintSettingActivity"
+            android:label="@string/app_name"/>
+        <activity
+            android:name="com.weilay.pos.PrintSettingActivity2"
+            android:label="@string/app_name"/>
+        <activity
+            android:name="com.weilay.pos.ReceivePayActivity"
+            android:label="@string/app_name"/>
+        <activity
+            android:name="com.weilay.pos.PaySelectActivity2"
+            android:label="@string/app_name"
+            android:launchMode="singleTask"/>
+        <activity
+            android:name="com.weilay.pos.SendTicketListActivity"
+            android:label="@string/app_name"/>
+        <activity
+            android:name="com.weilay.pos.SendTicketBeginAvtivity"
+            android:label="@string/app_name"/>
+        <activity
+            android:name="com.weilay.pos.VipInfoActivity"
+            android:label="@string/app_name"/>
+        <activity
+            android:name="com.weilay.pos.MemberRechargeActivity"
+            android:label="@string/app_name"/>
+        <activity android:name="com.weilay.pos.AdverActivity"/>
+        <activity
+            android:name="com.weilay.pos.ZxingScanActivity"
+            android:label="@string/app_name"/>
+        <activity
+            android:name="com.weilay.pos.SendTicketListActivity2"
+            android:label="@string/app_name"/>
+        <activity
+            android:name="com.weilay.pos.TaskActivity"
+            android:label="@string/app_name"
+            android:launchMode="singleTop"/>
+        <activity
+            android:name="com.weilay.pos.MessageActivity"
+            android:launchMode="singleTop"/>
+        <activity
+            android:name="com.weilay.pos.TestQRCodeActivity"
+            android:launchMode="singleTop"/>
+        <activity android:name="com.weilay.pos.SystemTestActivity"/>
+        <activity
+            android:name="com.weilay.pos.VideoActivity"
+            android:screenOrientation="landscape"/>
+    </application>
+
+</manifest>

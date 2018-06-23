@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:minWidth="380dp"
+     android:minHeight="180dp"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center"
+    android:background="@android:color/white"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="60dp" >
+
+        <TextView
+            android:id="@+id/dialog_confirm_title"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_alignParentTop="true"
+            android:background="@drawable/common_head"
+            android:gravity="center"
+            android:text="标题"
+            android:textColor="@android:color/white"
+            android:textSize="30sp" >
+        </TextView>
+
+        <ImageView
+            android:id="@+id/dialog_close"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentTop="true"
+            android:layout_centerVertical="true"
+            android:gravity="center"
+            android:padding="5dp"
+            android:src="@drawable/icon_close" />
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/dialog_confirm_content"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_centerInParent="true"
+        android:layout_weight="1"
+        android:padding="20dp"
+        android:text="内容"
+        android:textColor="@android:color/black"
+        android:textSize="25sp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:minHeight="35dp" >
+
+        <Button
+            android:id="@+id/dialog_confirm_sure"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_margin="6dp"
+            android:background="@drawable/dialog_sure_btn"
+            android:gravity="center"
+            android:minWidth="180dp"
+            android:text="确定"
+            android:textColor="@android:color/white"
+            android:textSize="30sp" />
+    </LinearLayout>
+
+</LinearLayout>

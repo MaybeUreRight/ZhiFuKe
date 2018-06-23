@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <TextView
+        android:id="@+id/merchantname_tv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="智付客"
+        android:textSize="30sp" />
+
+    <TextView
+        android:id="@+id/cardinfo_tv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/merchantname_tv"
+        android:gravity="center"
+        android:text="优惠券"
+        android:textSize="30sp" />
+
+    <View
+        android:id="@+id/view_1"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_below="@+id/cardinfo_tv"
+        android:background="@color/gray" />
+
+    <TextView
+        android:id="@+id/date_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/view_1"
+        android:layout_centerHorizontal="true"
+        android:gravity="center"
+        android:text="日期:2016-6-17" />
+
+    <ImageView
+        android:id="@+id/qrcode_iv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/date_tv"
+        android:layout_centerHorizontal="true" />
+
+    <TextView
+        android:id="@+id/ticketbegin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/qrcode_iv"
+        android:text="请使用微信扫一扫领取卡券"
+        android:textSize="26dp" />
+
+</RelativeLayout>

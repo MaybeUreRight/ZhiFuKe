@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical" >
+    <RelativeLayout
+        android:layout_width="match_parent" 
+        android:layout_height="wrap_content"
+        android:padding="5dp"
+        android:background="@color/black">
+        <com.weilay.pos.util.RotateTextView
+            android:id="@+id/pay_danwei"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:layout_toRightOf="@+id/pay_amount"
+            android:text="￥ "
+            android:textColor="@color/white"
+            android:textSize="50dp" />
+
+        <com.weilay.pos.util.RotateTextView
+            android:id="@+id/pay_amount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:text=""
+            android:textColor="@color/white"
+            android:textSize="50dp" />
+
+        <com.weilay.pos.util.RotateTextView
+            android:id="@+id/pay_paidAmount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/pay_amount"
+            android:layout_centerHorizontal="true"
+            android:text=""
+            android:textColor="@color/white"
+            android:textSize="50dp" />
+    </RelativeLayout>
+	
+    <FrameLayout
+        android:id="@+id/pay_fragment_layout"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="15">
+        <include layout="@layout/fragment_pay" 
+            android:id="@+id/other_payment"/>
+        <include layout="@layout/fragment_cash" 
+            android:id="@+id/cash_payment"/>
+         <include layout="@layout/fragment_permission" 
+            android:id="@+id/premission_ll"/>
+    </FrameLayout>
+	<com.framework.ui.HorizontalListView
+        android:id="@+id/choose_pay_hlv"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="3">
+    </com.framework.ui.HorizontalListView>
+
+</LinearLayout>

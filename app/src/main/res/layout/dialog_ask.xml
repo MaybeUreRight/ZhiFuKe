@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center"
+    android:background="@android:color/white"
+    android:minHeight="180dp"
+    android:minWidth="380dp"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="60dp"
+        android:minWidth="300dp" >
+
+        <TextView
+            android:id="@+id/dialog_ask_title"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_centerInParent="true"
+            android:background="@drawable/common_head"
+            android:gravity="center"
+            android:text="标题"
+            android:textColor="@android:color/white"
+            android:textSize="30sp" >
+        </TextView>
+
+        <ImageView
+            android:id="@+id/dialog_close"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:gravity="center"
+            android:padding="5dp"
+            android:src="@drawable/icon_close" />
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/dialog_ask_content"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_centerInParent="true"
+        android:layout_weight="1"
+        android:minWidth="300dp"
+        android:minHeight="150dp"
+        android:padding="10dp"
+        android:text="这是内容"
+        android:textColor="@color/gray"
+        android:textSize="25sp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:minHeight="50dp" 
+        android:layout_marginBottom="10dp">
+
+        <Button
+            android:id="@+id/dialog_ask_cancel"
+            android:layout_width="0dp"
+			android:layout_weight="1"	
+            android:layout_height="match_parent"
+            android:layout_margin="6dp"
+            android:background="@drawable/dialog_cancel_btn"
+            android:gravity="center"
+            android:minHeight="60dp"
+            android:minWidth="180dp"
+            android:text="取消"
+            android:textColor="@android:color/white"
+            android:textSize="30sp" />
+
+        <Button
+            android:id="@+id/dialog_ask_sure"
+             android:layout_width="0dp"
+			android:layout_weight="1"	
+            android:layout_height="match_parent"
+            android:layout_margin="6dp"
+            android:background="@drawable/dialog_sure_btn"
+            android:gravity="center"
+            android:minHeight="60dp"
+            android:minWidth="180dp"
+            android:text="确定"
+            android:textColor="@android:color/white"
+            android:textSize="30sp" />
+    </LinearLayout>
+
+</LinearLayout>

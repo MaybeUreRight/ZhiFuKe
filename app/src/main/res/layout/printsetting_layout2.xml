@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.weilay.pos.percent.PercentRelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <TextView
+        android:id="@+id/title_print"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/gray_bg"
+        android:gravity="center"
+        android:text="打印"
+        android:textSize="20sp" />
+
+    <RelativeLayout
+        android:id="@+id/rl_print"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/title_print"
+        android:layout_margin="5dp" >
+
+        <Switch
+            android:id="@+id/switch_serialtPrint"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textOff="关闭" 
+            android:textOn="开启"/>
+
+        <TextView
+            android:id="@+id/tv_serialPrint"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/switch_serialtPrint"
+            android:text="串口打印："
+            android:textSize="25sp" />
+
+        <Spinner
+            android:id="@+id/spinner_serialPrint"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/tv_serialPrint" />
+
+        <Switch
+            android:id="@+id/switch_usbPrint"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/switch_serialtPrint"
+            android:textOff="关闭" 
+            android:textOn="开启"
+            android:layout_marginTop="5dp" />
+
+        <TextView
+            android:id="@+id/tv_usbPrint"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/switch_serialtPrint"
+            android:layout_marginTop="5dp"
+            android:layout_toRightOf="@+id/switch_usbPrint"
+            android:text="USB打印："
+            android:textSize="25sp" />
+
+        <Spinner
+            android:id="@+id/spinner_usbPrint"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/switch_serialtPrint"
+            android:layout_marginTop="5dp"
+            android:layout_toRightOf="@+id/tv_usbPrint" />
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/title_read"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/rl_print"
+        android:background="@color/gray_bg"
+        android:gravity="center"
+        android:text="接收"
+        android:textSize="20sp" />
+
+    <RelativeLayout
+        android:id="@+id/rl_read"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/title_read"
+        android:layout_margin="5dp" >
+
+        <Switch
+            android:id="@+id/switch_serialtRead"
+            android:layout_width="wrap_content"
+            android:textOff="关闭" 
+            android:textOn="开启"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:id="@+id/tv_serialRead"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/switch_serialtRead"
+            android:text="串口接收："
+            android:textSize="25sp" />
+
+        <Spinner
+            android:id="@+id/spinner_serialRead"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/tv_serialRead" />
+
+        <Switch
+            android:id="@+id/switch_usbRead"
+            android:layout_width="wrap_content"
+            android:textOff="关闭" 
+            android:textOn="开启"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/switch_serialtRead"
+            android:layout_marginTop="5dp" />
+
+        <TextView
+            android:id="@+id/tv_usbRead"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/switch_serialtRead"
+            android:layout_marginTop="5dp"
+            android:layout_toRightOf="@+id/switch_usbRead"
+            android:text="USB接收："
+            android:textSize="25sp" />
+
+        <Spinner
+            android:id="@+id/spinner_usbRead"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/switch_serialtRead"
+            android:layout_marginTop="5dp"
+            android:layout_toRightOf="@+id/tv_usbRead" />
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/title_paper"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/rl_read"
+        android:background="@color/gray_bg"
+        android:gravity="center"
+        android:text="纸条大小"
+        android:textSize="20sp" />
+
+    <RelativeLayout
+        android:id="@+id/rl_paper"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/title_paper"
+        android:layout_margin="5dp" >
+
+        <TextView
+            android:id="@+id/tv_paper"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="纸张大小："
+            android:textSize="25sp" />
+
+        <Spinner
+            android:id="@+id/spinner_paper"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/tv_paper" />
+    </RelativeLayout>
+
+  
+    <View
+        android:id="@+id/view_view"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_above="@+id/printsetting_save_tv"
+        android:layout_margin="1dp"
+        android:background="@color/black" />
+
+    <TextView
+        android:id="@+id/printsetting_save_tv"
+        android:layout_width="match_parent"
+        android:layout_alignParentBottom="true"
+        android:layout_margin="10dp"
+        app:layout_heightPercent="11%"
+        android:background="@drawable/round_red"
+        android:gravity="center"
+        android:text="保存设置"
+        android:textColor="@color/white"
+        android:textSize="25sp" />
+
+</com.weilay.pos.percent.PercentRelativeLayout>

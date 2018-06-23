@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <color name="white">#ffffff</color>
+    <color name="black">#000000</color>
+    <color name="red">#ff0000</color>
+    <color name="ccc">#ccc</color>
+    <color name="selecleft">#ffd6d6d8</color>
+    <color name="selectright">#F0FFFF</color>
+    <!-- <color name="gray">#4a464a</color> -->
+
+    <color name="main_text">#8a8a8a</color>
+	
+	<color name="whitesmoke">#F5F5F5</color>
+    <!-- 灰色（128,128,128） -->
+    <color name="gray">#808080</color>
+    <!-- 纯蓝（0,0,255） -->
+    <color name="blue">#28CCA7</color>
+    <!-- 浅蓝 -->
+    <color name="main_item_select_color">#6699ff</color>
+    <!-- 浅绿色 -->
+    <color name="qgreen">#BBFFBB</color>
+    <!-- 浅灰 -->
+    <color name="white_gray">#BFBFBF</color>
+    <!-- 白灰 -->
+    <color name="white_smoke">#DDDDDD</color>
+    <!-- 透明颜色 -->
+    
+    <!-- 橙色 -->
+    <color name="orange">#ff7200</color>
+    <!-- 暗灰色 -->
+    <color name="darkgray">#a9a9a9</color>
+    <!-- 黄色 -->
+    <color name="yellow">#F2B33D</color>
+    <!-- 浅红色 -->
+    <color name="red_hight">#F1573B</color>
+    <color name="f8f8f8">#f8f8f8</color>
+
+    <!-- 日历视图所需要的颜色 -->
+    <color name="cal_color1">#FFEF9C</color>
+    <color name="cal_color2">#7BC7F7</color>
+    <color name="cal_color3">#63A6CE</color>
+    <color name="cal_color4">#FFC784</color>
+    <color name="cal_color5">#B3F2E3</color>
+    <color name="cal_color6">#A5BFE1</color>
+    <color name="line_color">#A5BFE1</color>
+    <color name="cacheColorHint">#00000000</color>
+    <color name="dialog_bg_color">#212831</color>
+
+    <!--  -->
+    <color name="btn_normal_begin">#fff</color>
+    <color name="btn_normal_end">#ccc</color>
+    <color name="btn_press_begin">#fefeee</color>
+    <color name="btn_press_end">#f9e795</color>
+    <!--  -->
+    <color name="callboard_bg">#5a5a5a</color>
+    <color name="message_list_item_background">#ffffff</color>
+    <color name="message_list_item_footer_background">#eeeeee</color>
+    <color name="select_group_check">#808ead</color>
+    <color name="select_group_un_check">#000</color>
+
+    <!-- 自定义listview加载背景 -->
+    <color name="list_load_view">#669999</color>
+    <color name="keywork_line1">#FFFAF4</color>
+    <color name="keywork_line">#ccc</color>
+    <color name="keywork_line2">#000</color>
+    <color name="keywork_white1">#FFE4CA</color>
+    <color name="keywork_white">#fff</color>
+    <color name="keywork_title">#E6F1F5</color>
+    <color name="keywork_list_bg">#6699FF</color>
+    <color name="keywork_month_item">#FFFFCC</color>
+    <color name="base_bg">#00B0F0</color>
+    <color name="btn_true">#00AFF0</color>
+    <color name="btn_false">#1874CD</color>
+    <color name="gray_bg">#E6E6E6</color>
+
+    <!-- 深灰色（128,128,128） -->
+    <color name="gray1">#555</color>
+    <color name="black1">#676767</color>
+    <color name="green1">#2abb45</color>
+    <color name="blue1">#0168B7</color>
+
+</resources>

@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="wrap_content"
+    android:layout_gravity="bottom|center_horizontal"
+    android:background="@color/whitesmoke"
+    android:alpha="0.8"
+    android:gravity="top|center_horizontal"
+    android:layout_height="wrap_content">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp">
+        <TextView
+            android:id="@+id/dialog_numbere_title"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_centerVertical="true"
+            android:textColor="@android:color/white"
+            android:textSize="16sp"
+            android:gravity="center"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:padding="5dp"
+            android:background="@drawable/common_head"/>
+        <ImageView
+            android:id="@+id/dialog_close"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:padding="5dp"
+            android:gravity="center"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:src="@drawable/icon_close"/>
+    </RelativeLayout>
+
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="350dp"
+        android:padding="6dp"
+        android:gravity="top|center_horizontal"
+        android:layout_height="wrap_content">
+        <EditText
+            android:id="@+id/dialog_number_edittext"
+            android:gravity="center"
+            android:background="@drawable/edit_bg"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <android.inputmethodservice.KeyboardView
+            android:id="@+id/dialog_number_keyboard"
+            android:keepScreenOn="false"
+            android:keyTextColor="#00ff00"
+            android:layout_marginTop="10dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+</LinearLayout>

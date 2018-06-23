@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F2B33D"
+    android:orientation="vertical" >
+
+    <TextView
+        android:id="@+id/refund_info"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="80dp"
+        android:text="退款信息"
+        android:textColor="@color/white"
+        android:textSize="40sp" />
+
+    <TextView
+        android:id="@+id/refund_dh"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/refund_info"
+        android:layout_centerInParent="true"
+        android:text="商户单号:"
+        android:textColor="@color/white"
+        android:textSize="40sp" />
+
+    <TextView
+        android:id="@+id/refund_danhao"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/refund_dh"
+        android:layout_centerInParent="true"
+        android:text=""
+        android:textColor="@color/white"
+        android:textSize="40sp" />
+
+    <TextView
+        android:id="@+id/refund_jine"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/refund_danhao"
+        android:layout_centerInParent="true"
+        android:text="可退总额:"
+        android:textColor="@color/white"
+        android:textSize="40sp" />
+
+    <com.weilay.pos.percent.PercentLinearLayout
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:orientation="vertical" >
+
+        <TextView
+            android:id="@+id/refund_enter"
+            android:layout_width="match_parent"
+            android:layout_margin="10dp"
+            app:layout_heightPercent="15%"
+            android:background="@drawable/but_select_blue"
+            android:gravity="center"
+            android:text="确定"
+            android:textColor="@color/white"
+            android:textSize="40sp" />
+    </com.weilay.pos.percent.PercentLinearLayout>
+
+    
+</RelativeLayout>

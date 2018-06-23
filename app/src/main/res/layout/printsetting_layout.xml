@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.weilay.pos.percent.PercentRelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+
+    <RelativeLayout
+        android:id="@+id/rl_4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/rl_3" >
+
+        <TextView
+            android:id="@+id/printpaper_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_margin="10dp"
+            android:text="打印纸条大小:"
+            android:textSize="28sp" />
+
+        <Spinner
+            android:id="@+id/printpaper_spinner"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:layout_toRightOf="@+id/printpaper_tv" />
+    </RelativeLayout>
+      <RelativeLayout
+        android:id="@+id/rl_payprint"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/rl_4"
+        android:layout_margin="5dp" >
+
+        <TextView
+            android:id="@+id/tv_payprint"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="凭证打印张数:"
+            android:textSize="28sp" />
+
+        <Spinner
+            android:id="@+id/spinner_payprint"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/tv_payprint" />
+    </RelativeLayout>
+      <RelativeLayout
+        android:id="@+id/rl_printphoto"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/rl_payprint"
+        android:layout_margin="5dp" >
+
+        <TextView
+            android:id="@+id/tv_printphoto"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="是否打印二维码/条形码"
+            android:textSize="28sp" />
+
+        <Switch
+            android:id="@+id/switch_printphoto"
+            android:textOff="不打印"  
+        	android:textOn="打印"
+        	
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/tv_printphoto" />
+    </RelativeLayout>
+    <RelativeLayout
+        android:id="@+id/rl_paystyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/rl_printphoto"
+        android:layout_margin="5dp" >
+
+        <TextView
+            android:id="@+id/tv_paystyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="是否默认大支付码模式"
+            android:textSize="28sp" />
+
+        <Switch
+            android:id="@+id/switch_paystyle"
+            android:textOff="不开启"  
+        	android:textOn="开启"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/tv_paystyle" />
+    </RelativeLayout>
+        <RelativeLayout
+        android:id="@+id/rl_paysound"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/rl_paystyle"
+        android:layout_margin="5dp" >
+
+        <TextView
+            android:id="@+id/tv_paysound"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="是否开启支付语音提示"
+            android:textSize="28sp" />
+
+        <Switch
+            android:id="@+id/switch_paysound"
+            android:textOff="不开启"  
+        	android:textOn="开启"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/tv_paysound" />
+    </RelativeLayout>
+      <RelativeLayout
+        android:id="@+id/rl_printrefund"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/rl_paysound"
+        android:layout_margin="5dp" >
+
+        <TextView
+            android:id="@+id/tv_printrefund"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="是否打印退款单"
+            android:textColor="@color/white"
+            android:textSize="28sp" />
+
+        <Switch
+            android:id="@+id/switch_printrefund"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/tv_printrefund"
+            android:textOff="不打印"
+            android:textOn="打印" />
+    </RelativeLayout>
+    <View
+        android:id="@+id/view_view"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_above="@+id/printsetting_save_tv"
+        android:layout_margin="1dp"
+        android:background="@color/black" />
+
+    <TextView
+        android:id="@+id/printsetting_save_tv"
+        android:layout_width="match_parent"
+        android:layout_alignParentBottom="true"
+        android:layout_margin="10dp"
+        app:layout_heightPercent="11%"
+        android:background="@drawable/round_red"
+        android:gravity="center"
+        android:text="保存设置"
+        android:textColor="@color/white"
+        android:textSize="25sp" />
+
+</com.weilay.pos.percent.PercentRelativeLayout>

@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:focusable="true"
+    android:focusableInTouchMode="true" >
+
+    <!-- ssid -->
+
+    <LinearLayout
+        android:id="@+id/ll_1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_margin="10dp"
+        android:orientation="vertical" >
+
+        <EditText
+            android:id="@+id/wifi_ssid"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:gravity="center"
+            android:hint="请输入要连接wifi的ssid"
+            android:maxEms="22"
+            android:minEms="1"
+            android:singleLine="true"
+            android:textSize="30sp" />
+
+        <Spinner
+            android:id="@+id/wifi_secutry"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+             android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:gravity="center" />
+
+        <EditText
+            android:id="@+id/wifi_pwd"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:gravity="center"
+            android:hint="请输入密码"
+            android:inputType="textPassword"
+            android:textSize="30sp" />
+    </LinearLayout>
+
+    <com.weilay.pos.percent.PercentRelativeLayout
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/rl_1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/ll_1"
+        android:layout_centerHorizontal="true"
+        android:orientation="vertical" >
+
+        <TextView
+            android:id="@+id/wifi_connect_cancel"
+            android:layout_margin="10dp"
+            app:layout_heightPercent="13%"
+            app:layout_widthPercent="40%"
+            android:background="@drawable/but_round_select_red"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:gravity="center"
+            android:text="取消"
+            android:textColor="@color/white"
+            android:textSize="30sp" />
+
+        <TextView
+            android:id="@+id/wifi_connect_enter"
+            android:layout_margin="10dp"
+            android:layout_toRightOf="@+id/wifi_connect_cancel"
+            app:layout_heightPercent="13%"
+            app:layout_widthPercent="40%"
+            android:background="@drawable/but_round_select_green"
+            android:clickable="true"
+            android:gravity="center"
+            android:text="连接"
+            android:textColor="@color/white"
+            android:textSize="30sp" />
+    </com.weilay.pos.percent.PercentRelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/rl_1"
+        android:layout_marginTop="10dp" >
+
+        <android.inputmethodservice.KeyboardView
+            android:id="@+id/keyboard_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:keyBackground="@drawable/btn_keyboard_key"
+            android:keyTextColor="@color/black"
+            android:shadowColor="@color/black"
+            android:shadowRadius="0.0"
+            android:visibility="gone" />
+    </RelativeLayout>
+
+</RelativeLayout>

@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/gray"
+    android:baselineAligned="true"
+    android:orientation="horizontal" >
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:orientation="vertical" >
+
+        <TextView
+            android:id="@+id/pay_number_1"
+            style="@style/keyboard_item"
+            android:text="1" />
+
+        <TextView
+            android:id="@+id/pay_number_4"
+            style="@style/keyboard_item"
+            android:text="4" />
+
+       <TextView
+            android:id="@+id/pay_number_7"
+            style="@style/keyboard_item"
+            android:text="7" />
+
+       <TextView
+            android:id="@+id/pay_number_00"
+            style="@style/keyboard_item"
+            android:text="00" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:orientation="vertical" >
+
+         <TextView
+            android:id="@+id/pay_number_2"
+            style="@style/keyboard_item"
+            android:text="2" />
+
+        <TextView
+            android:id="@+id/pay_number_5"
+            style="@style/keyboard_item"
+            android:text="5" />
+
+       <TextView
+            android:id="@+id/pay_number_8"
+            style="@style/keyboard_item"
+            android:text="8" />
+
+       <TextView
+            android:id="@+id/pay_number_0"
+            style="@style/keyboard_item"
+            android:text="0" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:orientation="vertical" >
+
+          <TextView
+            android:id="@+id/pay_number_3"
+            style="@style/keyboard_item"
+            android:text="3" />
+
+        <TextView
+            android:id="@+id/pay_number_6"
+            style="@style/keyboard_item"
+            android:text="6" />
+
+       <TextView
+            android:id="@+id/pay_number_9"
+            style="@style/keyboard_item"
+            android:text="9" />
+
+       <TextView
+            android:id="@+id/pay_number_point"
+            style="@style/keyboard_item"
+            android:text="." />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:orientation="vertical" >
+
+        <TextView
+            android:id="@+id/pay_clear"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginBottom="1dp"
+            android:layout_marginLeft="1dp"
+            android:layout_weight="1"
+            android:background="@color/black1"
+            android:gravity="center"
+            android:text="清空"
+            android:textColor="@color/white"
+            android:textSize="30dp" />
+
+        <TextView
+            android:id="@+id/pay_delete"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:background="@color/red"
+            android:gravity="center"
+            android:text="删除"
+            android:textColor="@color/white"
+            android:textSize="30dp" />
+
+        <TextView
+            android:id="@+id/pay_enter"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_below="@+id/pay_delete"
+            android:layout_marginBottom="1dp"
+            android:layout_marginLeft="1dp"
+            android:layout_weight="2"
+            android:background="@color/green1"
+            android:gravity="center"
+            android:text="确定"
+            android:textColor="@color/white"
+            android:textSize="30dp" />
+    </LinearLayout>
+
+</LinearLayout>

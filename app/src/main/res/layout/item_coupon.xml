@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.weilay.pos.percent.PercentRelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/bg_coupon"
+    android:padding="10dp" >
+
+    <com.weilay.pos.percent.PercentRelativeLayout
+        android:id="@+id/rl_1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+
+        <ImageView
+            android:id="@+id/merchantlogo_iv"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_margin="10dp"
+            android:background="@drawable/bg_line_shane" />
+
+        <TextView
+            android:id="@+id/merchantname_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="10dp"
+            android:layout_toLeftOf="@+id/send_layout"
+            android:layout_toRightOf="@+id/merchantlogo_iv"
+            android:text="炫彩生活"
+            android:textColor="@color/red_hight"
+            android:textSize="21dp" />
+
+        <TextView
+            android:id="@+id/cardinfo_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/merchantname_tv"
+            android:layout_margin="5dp"
+            android:layout_toLeftOf="@+id/send_layout"
+            android:layout_toRightOf="@+id/merchantlogo_iv"
+            android:text="？元代金券"
+            android:textColor="@color/blue1"
+            android:textSize="24sp" />
+
+        <TextView
+            android:id="@+id/prefer_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/view_dotted"
+            android:layout_margin="3dp"
+            android:layout_toRightOf="@+id/merchantlogo_iv"
+            android:text="任务奖励：每领1张可获得？元奖励"
+            android:textColor="@color/orange"
+            android:textSize="18sp" />
+
+        <View
+            android:id="@+id/view_dotted"
+            android:layout_width="match_parent"
+            android:layout_height="7dp"
+            android:layout_below="@+id/merchantlogo_iv"
+            android:layout_margin="10dp"
+            android:background="@drawable/dotted_line_2" />
+
+        <com.weilay.pos.percent.PercentRelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/view_dotted"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp" >
+
+            <TextView
+                android:id="@+id/sendticket_stock"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:text="库存：10张"
+                android:textColor="@color/black"
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/sendticket_deadline"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="5dp"
+                android:text="有效期：2016-06-07"
+                android:textColor="@color/black"
+                android:textSize="20sp" />
+        </com.weilay.pos.percent.PercentRelativeLayout>
+    </com.weilay.pos.percent.PercentRelativeLayout>
+
+</com.weilay.pos.percent.PercentRelativeLayout>

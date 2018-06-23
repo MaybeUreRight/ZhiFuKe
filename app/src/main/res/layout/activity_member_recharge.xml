@@ -1,0 +1,322 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:gravity="center_horizontal"
+    android:orientation="vertical" >
+
+    <include
+        android:id="@+id/common_head"
+        layout="@layout/common_head" />
+
+    <RelativeLayout
+        android:id="@+id/search_ll"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/common_head"
+        android:layout_margin="10dp"
+        android:background="@color/white"
+        android:gravity="center_vertical"
+        android:orientation="horizontal" >
+
+        <ImageView
+            android:id="@+id/scan_iv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_margin="5dp"
+            android:src="@drawable/btn_scan" />
+
+        <EditText
+            android:id="@+id/member_search_et"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@+id/scan_iv"
+            android:background="@drawable/bg_edit"
+            android:clickable="true"
+            android:gravity="center"
+            android:hint="输入会员卡号"
+            android:padding="5dp"
+            android:textSize="20sp" >
+        </EditText>
+
+        <Button
+            android:id="@+id/member_search_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:layout_centerVertical="true"
+            android:layout_margin="5dp"
+            android:layout_toRightOf="@+id/member_search_et"
+            android:background="@drawable/btn_search"
+            android:minWidth="100dp"
+            android:textColor="@color/white"
+            android:textSize="22sp" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/scan_ll"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/search_ll"
+        android:orientation="vertical"
+        android:visibility="gone" >
+
+        <include layout="@layout/zxingsacn_layout" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/member_ll"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/search_ll"
+        android:layout_marginTop="20dp"
+        android:gravity="center_horizontal"
+        android:orientation="vertical" >
+
+        <TextView
+            android:id="@+id/member_name_tv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:padding="3dp"
+            android:text="会员姓名："
+            android:textColor="@color/gray"
+            android:textSize="24dp" >
+        </TextView>
+
+        <TextView
+            android:id="@+id/member_no_tv"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="10dp"
+            android:padding="3dp"
+            android:text="会员卡号："
+            android:textColor="@color/gray"
+            android:textSize="24dp" >
+        </TextView>
+
+        <TextView
+            android:id="@+id/member_amt_tv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:padding="3dp"
+            android:text="会员余额："
+            android:textColor="@color/gray"
+            android:textSize="24dp" >
+        </TextView>
+
+        <TextView
+            android:id="@+id/member_gift_tv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:padding="3dp"
+            android:text="赠送余额："
+            android:textColor="@color/gray"
+            android:textSize="24dp" >
+        </TextView>
+
+        <TextView
+            android:id="@+id/member_level_tv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:padding="3dp"
+            android:text="会员等级:"
+            android:textColor="@color/gray"
+            android:textSize="24dp" >
+        </TextView>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="5dp"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="3dp"
+                android:text="充值金额："
+                android:textColor="@color/gray"
+                android:textSize="24dp" >
+            </TextView>
+
+            <EditText
+                android:id="@+id/member_recharge_et"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="20dp"
+                android:background="@drawable/bg_edit_recharge_money"
+                android:gravity="center"
+                android:hint="输入充值金额"
+                android:inputType="numberDecimal"
+                android:padding="3dp"
+                android:textColor="@color/gray"
+                android:textSize="24dp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="5dp"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="3dp"
+                android:text="赠送金额："
+                android:textColor="@color/gray"
+                android:textSize="24dp" >
+            </TextView>
+
+            <TextView
+                android:id="@+id/member_recharge_gift_tv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="3dp"
+                android:text="0"
+                android:textColor="@color/red"
+                android:textSize="24dp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/recharge_perfer_rl"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="13dp" >
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:drawableLeft="@drawable/icon_recharge"
+                android:paddingLeft="10dp"
+                android:text="充值优惠"
+                android:textColor="@color/orange"
+                android:textSize="24sp" />
+
+            <TextView
+                android:id="@+id/empty_view"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:gravity="center_horizontal"
+                android:textColor="@color/black" >
+            </TextView>
+
+            <GridView
+                android:id="@+id/recharge_prefer_gv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:gravity="center_horizontal"
+                android:numColumns="2" >
+            </GridView>
+        </LinearLayout>
+    </LinearLayout>
+ 	<LinearLayout
+        android:id="@+id/member_ll1"
+       	android:visibility="gone"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/search_ll"
+        android:layout_marginTop="20dp"
+        android:gravity="center_horizontal"
+        android:orientation="vertical" >
+
+        <TextView
+            android:id="@+id/member_name_tv1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:padding="3dp"
+            android:text="会员姓名："
+            android:textColor="@color/gray"
+            android:textSize="24dp" >
+        </TextView>
+
+        <TextView
+            android:id="@+id/member_no_tv1"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="10dp"
+            android:padding="3dp"
+            android:text="会员卡号："
+            android:textColor="@color/gray"
+            android:textSize="24dp" >
+        </TextView>
+
+        <TextView
+            android:id="@+id/member_amt_tv1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:padding="3dp"
+            android:text="请选择充值的金额"
+           android:textStyle="bold"
+            android:textColor="@color/black"
+            android:textSize="24dp" >
+        </TextView>
+         <TextView
+               android:id="@+id/empty_view1"
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               android:layout_marginTop="10dp"
+               android:gravity="center_horizontal"
+               android:textColor="@color/black" >
+           </TextView>
+        
+		<ListView
+		    android:id="@+id/times_lv"
+		    android:layout_width="wrap_content"
+		    android:layout_height="match_parent"
+		    android:scrollbars="none">
+		    
+		</ListView>
+    </LinearLayout>
+    <Button
+        android:id="@+id/member_recharge_btn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/btn_recharge"
+        android:paddingTop="10dp"
+        android:textColor="@color/white"
+        android:textSize="22dp" />
+
+    <FrameLayout
+        android:id="@+id/keyboard_ll"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true" >
+
+        <LinearLayout
+            android:id="@+id/recharge_prefer_ll"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="10dp"
+            android:gravity="bottom|left"
+            android:orientation="vertical" >
+        </LinearLayout>
+
+        <android.inputmethodservice.KeyboardView
+            android:id="@+id/keyboard_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:keyBackground="@drawable/btn_keyboard_key"
+            android:keyTextColor="@color/black"
+            android:shadowRadius="0.0" />
+    </FrameLayout>
+
+</RelativeLayout>

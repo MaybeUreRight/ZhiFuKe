@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="top" >
+
+    <com.weilay.pos.percent.PercentRelativeLayout
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true" >
+
+        <TextView
+            android:id="@+id/jiezhang_dayin_cancel"
+            app:layout_heightPercent="10%"
+            app:layout_widthPercent="50%"
+            android:background="@drawable/but_select_gray"
+            android:gravity="center"
+            android:text="返回"
+            android:textColor="@color/white"
+            android:textSize="35sp" />
+
+        <TextView
+            android:id="@+id/jiezhang_dayin_print"
+            android:layout_toRightOf="@+id/jiezhang_dayin_cancel"
+            app:layout_heightPercent="10%"
+            app:layout_widthPercent="50%"
+            android:background="@drawable/but_select_blue"
+            android:gravity="center"
+            android:text="补打小票"
+            android:textColor="@color/white"
+            android:textSize="35sp" />
+
+        <TextView
+            android:id="@+id/jiezhang_dayin_jineName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/jiezhang_dayin_print"
+            android:layout_margin="10dp"
+            android:gravity="center"
+            android:text="付款金额"
+            android:textSize="25sp" />
+
+        <TextView
+            android:id="@+id/jiezhang_dayin_jine"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_below="@+id/jiezhang_dayin_print"
+            android:layout_margin="10dp"
+            android:text="0.00"
+            android:textSize="33sp" />
+
+        <View
+            android:id="@+id/view_view1"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_below="@+id/jiezhang_dayin_jine"
+            android:layout_margin="5dp"
+            android:background="@color/gray" />
+
+        <TextView
+            android:id="@+id/jiezhang_dayin_snName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/view_view1"
+            android:layout_margin="10dp"
+            android:text="设备编码"
+            android:textSize="25sp" />
+
+        <TextView
+            android:id="@+id/jiezhang_dayin_sn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_below="@+id/view_view1"
+            android:layout_margin="10dp"
+            android:text="0000"
+            android:textSize="25sp" />
+
+        <TextView
+            android:id="@+id/jiezhang_dayin_paytypeName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/jiezhang_dayin_sn"
+            android:layout_margin="10dp"
+            android:text="交易方式"
+            android:textSize="25sp" />
+
+        <TextView
+            android:id="@+id/jiezhang_dayin_paytype"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_below="@+id/jiezhang_dayin_sn"
+            android:layout_margin="10dp"
+            android:text="微信支付"
+            android:textSize="25sp" />
+
+        <TextView
+            android:id="@+id/jiezhang_dayin_danhaoName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/jiezhang_dayin_paytype"
+            android:layout_margin="10dp"
+            android:text="商户单号"
+            android:textSize="25sp" />
+
+        <TextView
+            android:id="@+id/jiezhang_dayin_danhao"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_below="@+id/jiezhang_dayin_paytype"
+            android:layout_margin="10dp"
+            android:maxLines="4"
+            android:maxWidth="330dp"
+            android:text=""
+            android:textSize="25sp" />
+
+        <TextView
+            android:id="@+id/jiezhang_dayin_dateName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/jiezhang_dayin_danhao"
+            android:layout_margin="10dp"
+            android:text="交易时间"
+            android:textSize="25sp" />
+
+        <TextView
+            android:id="@+id/jiezhang_dayin_date"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_below="@+id/jiezhang_dayin_danhao"
+            android:layout_margin="10dp"
+            android:text="2016-06-13"
+            android:textSize="25sp" />
+
+        <View
+            android:id="@+id/view_view2"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_below="@+id/jiezhang_dayin_date"
+            android:layout_margin="10dp"
+            android:background="@color/gray" />
+
+        <TextView
+            android:id="@+id/jiezhang_dayin_refund"
+            android:layout_width="match_parent"
+            android:layout_below="@+id/view_view2"
+            app:layout_heightPercent="10%"
+            android:background="@drawable/but_select_red"
+            android:gravity="center"
+            android:text="退款"
+            android:textColor="@color/white"
+            android:textSize="35sp" />
+    </com.weilay.pos.percent.PercentRelativeLayout>
+
+</RelativeLayout>

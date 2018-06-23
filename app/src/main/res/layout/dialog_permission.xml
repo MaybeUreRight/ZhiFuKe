@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/card_panel"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="20dp"
+    android:background="@drawable/bg_line_shane"
+    android:minWidth="300dp"
+    android:orientation="vertical" >
+
+    <TextView
+        android:id="@+id/card_title"
+        android:layout_width="wrap_content"
+        android:layout_height="45dp"
+        android:gravity="center_vertical"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:text="微信扫描解锁"
+        android:textColor="@color/black"
+        android:textSize="20dp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/btn_close"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignRight="@+id/card_title"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="10dp"
+        android:background="@drawable/message_round"
+        android:padding="8dp"
+        android:textSize="30dp"
+        android:text=" X "
+        android:textColor="@color/white" />
+
+    <View
+        android:id="@+id/card_delivery"
+        android:layout_width="280dp"
+        android:layout_height="1dp"
+        android:layout_below="@+id/btn_close"
+        android:layout_margin="4dp"
+        android:background="@color/gray" >
+    </View>
+
+   	<ImageView
+   	    android:id="@+id/scan_img"
+   	    android:layout_width="240dp"
+   	    android:layout_height="240dp"
+   	    android:src="@drawable/icon_info"
+   	    android:layout_centerInParent="true"
+   	    android:layout_below="@+id/card_delivery"
+   	    android:layout_margin="8dp">
+   	</ImageView>
+</RelativeLayout>

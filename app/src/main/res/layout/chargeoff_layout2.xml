@@ -1,0 +1,74 @@
+<com.weilay.pos.percent.PercentRelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="#313131" >
+
+    <com.weilay.pos.percent.PercentRelativeLayout
+        android:id="@+id/prl_1"
+        android:layout_width="match_parent"
+        app:layout_heightPercent="10%" >
+
+        <ImageView
+            android:id="@+id/scan_iv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:src="@drawable/zxingscan" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerInParent="true"
+            android:text="←点击切换键盘或扫码框"
+            android:textColor="@color/white"
+            android:textSize="25sp" />
+    </com.weilay.pos.percent.PercentRelativeLayout>
+
+    <com.weilay.pos.percent.PercentRelativeLayout
+        android:id="@+id/prl_2"
+        android:layout_width="match_parent"
+        android:layout_below="@+id/prl_1"
+        app:layout_heightPercent="10%"
+        android:background="#313131" >
+
+        <EditText
+            android:id="@+id/chargeoff_code"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true"
+            android:layout_margin="5dp"
+            android:background="@null"
+            android:hint="请输入兑换码"
+            android:textColor="@color/gray"
+            android:textSize="40dp" />
+    </com.weilay.pos.percent.PercentRelativeLayout>
+
+
+    <LinearLayout
+        android:id="@+id/scan_ll"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/prl_2"
+        android:orientation="horizontal"
+        android:visibility="gone" >
+
+        <include layout="@layout/zxingsacn_layout" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/keyboard_ll"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/prl_2" >
+
+        <include
+            android:id="@+id/keyboard_co"
+            layout="@layout/keyboard_view" />
+
+    </LinearLayout>
+ 
+
+</com.weilay.pos.percent.PercentRelativeLayout>

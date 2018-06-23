@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <com.weilay.pos.percent.PercentRelativeLayout
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/rl_1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true" >
+
+        <ImageView
+            android:id="@+id/dayinjiance_iv"
+            android:layout_margin="3dp"
+            app:layout_heightPercent="33%"
+            app:layout_widthPercent="49%"
+            android:scaleType="fitXY"
+            android:src="@drawable/icon_print_test" />
+
+        <ImageView
+            android:id="@+id/qrjiance_iv"
+            android:layout_marginBottom="3dp"
+            android:layout_marginRight="3dp"
+            android:layout_toRightOf="@+id/dayinjiance_iv"
+            android:layout_marginTop="3dp"
+            app:layout_heightPercent="33%"
+            app:layout_widthPercent="49%"
+            android:scaleType="fitXY"
+            android:src="@drawable/icon_qr" />
+         <ImageView
+            android:id="@+id/kexiantiaoshi_iv"
+            android:visibility="gone"
+            android:layout_marginBottom="3dp"
+            android:layout_marginRight="3dp"
+            android:layout_marginTop="3dp"
+            android:layout_below="@+id/qrjiance_iv"
+            app:layout_heightPercent="33%"
+            app:layout_widthPercent="49%"
+            android:scaleType="fitXY"
+            android:src="@drawable/icon_customdiaplay" />
+    </com.weilay.pos.percent.PercentRelativeLayout>
+
+</RelativeLayout>

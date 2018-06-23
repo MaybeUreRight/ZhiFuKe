@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:id="@+id/rl_title"
+        android:layout_width="match_parent"
+        android:layout_height="70px"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:background="#3E3A39" >
+
+        <TextView
+            android:id="@+id/item_title_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:text="QR检测"
+            android:textColor="@color/white"
+            android:textSize="30sp" />
+
+        <ImageView
+            android:id="@+id/sound_setting"
+            android:visibility="gone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="10dp"
+            android:src="@drawable/icon_sound" />
+         <ImageView
+           android:id="@+id/add_wifi"
+           android:visibility="gone"
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:layout_alignParentRight="true"
+           android:layout_centerVertical="true"
+           android:layout_marginRight="10dp"
+           android:src="@drawable/icon_add" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rl_main"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/rl_down"
+        android:layout_below="@+id/rl_title" >
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rl_down"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true" >
+
+        <include layout="@layout/title_down" />
+    </RelativeLayout>
+
+</RelativeLayout>

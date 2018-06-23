@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.weilay.pos.percent.PercentRelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <RelativeLayout
+        android:id="@+id/rl_1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" >
+        <TextView
+            android:id="@+id/duankousend_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_margin="10dp"
+            android:text="打印串口:"
+            android:textSize="30sp" />
+
+        <Spinner
+            android:id="@+id/duankousend_spinner"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:layout_toRightOf="@+id/duankousend_tv" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rl_2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/rl_1" >
+
+        <TextView
+            android:id="@+id/duankouread_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_margin="10dp"
+            android:text="接收串口:"
+            android:textSize="30sp" />
+
+        <Spinner
+            android:id="@+id/duankouread_spinner"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:layout_toRightOf="@+id/duankouread_tv" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rl_3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/rl_2" >
+
+        <TextView
+            android:id="@+id/usb_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_margin="10dp"
+            android:text="USB:"
+            android:textSize="30sp" />
+
+        <Spinner
+            android:id="@+id/usb_spinner"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:layout_toRightOf="@+id/usb_tv" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rl_4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/rl_3" >
+
+        <TextView
+            android:id="@+id/printpaper_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_margin="10dp"
+            android:text="打印纸条大小:"
+            android:textSize="30sp" />
+
+        <Spinner
+            android:id="@+id/printpaper_spinner"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:layout_toRightOf="@+id/printpaper_tv" />
+    </RelativeLayout>
+
+    <View
+        android:id="@+id/view_view"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_above="@+id/printsetting_save_tv"
+        android:layout_margin="1dp"
+        android:background="@color/black" />
+
+    <TextView
+        android:id="@+id/printsetting_save_tv"
+        android:layout_width="match_parent"
+        android:layout_alignParentBottom="true"
+        android:layout_margin="10dp"
+        app:layout_heightPercent="11%"
+        android:background="@drawable/round_red"
+        android:gravity="center"
+        android:text="保存设置"
+        android:textColor="@color/white"
+        android:textSize="25sp" />
+
+</com.weilay.pos.percent.PercentRelativeLayout>

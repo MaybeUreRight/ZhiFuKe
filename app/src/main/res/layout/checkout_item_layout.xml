@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white" >
+
+    <RelativeLayout
+        android:id="@+id/rl_1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp"
+        android:background="@color/gray_bg" >
+
+        <TextView
+            android:id="@+id/title_date"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:text="2016年6月"
+            android:textSize="18sp" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/rl_1"
+        android:layout_margin="10dp" >
+
+        <TextView
+            android:id="@+id/jiezhang_danhao"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:text="商户单号:"
+            android:textSize="22sp" />
+
+        <TextView
+            android:id="@+id/jiezhang_date"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/jiezhang_danhao"
+            android:layout_marginLeft="10dp"
+            android:text="2016-04-01"
+            android:textSize="22sp" />
+
+        <TextView
+            android:id="@+id/jiezhang_paytype"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/jiezhang_danhao"
+            android:layout_toLeftOf="@+id/jiezhang_amount"
+            android:text="微信支付"
+            android:layout_marginRight="5dp"
+            android:textSize="22sp" />
+
+        <TextView
+            android:id="@+id/jiezhang_amount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_below="@+id/jiezhang_danhao"
+            android:text="￥0.01"
+            android:textSize="22sp" />
+    </RelativeLayout>
+
+</RelativeLayout>

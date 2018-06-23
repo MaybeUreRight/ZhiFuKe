@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/gray_bg" >
+
+    <LinearLayout
+        android:id="@+id/ll_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/black1"
+        android:orientation="horizontal" >
+
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1" >
+
+            <TextView
+                android:id="@+id/normal_coupon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:gravity="center"
+                android:text="普通券"
+                android:textColor="@color/white"
+                android:textSize="35sp" />
+
+            <View
+                android:id="@+id/normal_view"
+                android:layout_width="wrap_content"
+                android:layout_height="5dp"
+                android:layout_below="@+id/normal_coupon"
+                android:background="@color/green1" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1" >
+
+            <TextView
+                android:id="@+id/friend_coupon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:gravity="center"
+                android:text="朋友券"
+                android:textColor="@color/white"
+                android:textSize="35sp" />
+
+            <View
+                android:id="@+id/friend_view"
+                android:layout_width="match_parent"
+                android:layout_height="5dp"
+                android:layout_below="@+id/friend_coupon"
+                android:background="@color/green1"
+                android:visibility="gone" />
+        </RelativeLayout>
+    </LinearLayout>
+
+    <FrameLayout
+        android:id="@+id/coupon_fragment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/ll_title" >
+    </FrameLayout>
+
+</RelativeLayout>

@@ -183,7 +183,7 @@ public class LoginActivity extends BaseActivity implements OnClickListener,OnTou
 				GlobalPush.subjectMessage(PosDefine.MQTT_SEND_CARD
 						+ operator.getAgentid(),PosDefine.MQTT_PUSH_BASE+GetUtil.getimei(getApplicationContext()));
 				//打开串口接收，放在登陆成功以后
-				WeiLayApplication.openComPort();
+//				WeiLayApplication.openComPort();
 				stopLoading();
 				//进入"启动页面"
 				StartActivity.actionStart(mContext);

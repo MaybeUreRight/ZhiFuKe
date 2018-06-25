@@ -38,6 +38,7 @@
     <!-- 获取手机录音机使用权限，听写、识别、语义理解需要用到此权限 -->
     <uses-permission android:name="android.permission.RECORD_AUDIO" />
     <application
+        android:name=".app.WeiLayApplication"
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
@@ -54,11 +55,11 @@
         <service
             android:name="com.weilay.pos.service.WeilayService"
             android:enabled="true"
-            android:exported="true"></service>
+            android:exported="true" />
 
         <receiver android:name="com.weilay.pos.app.BroadcastStart">
             <intent-filter>
-                <action android:name="android.intent.action.BOOT_COMPLETED"></action>
+                <action android:name="android.intent.action.BOOT_COMPLETED"/>
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
@@ -87,145 +88,145 @@
         <activity
             android:name="com.weilay.pos.StartActivity"
             android:label="@string/app_name"
-            android:windowSoftInputMode="stateHidden"/>
+            android:windowSoftInputMode="stateHidden" />
         <activity
             android:name="com.weilay.pos.ChargeOffActivity"
-            android:label="@string/app_name"/>
+            android:label="@string/app_name" />
         <activity
             android:name="com.weilay.pos.PrintActivity"
-            android:label="@string/app_name"/>
+            android:label="@string/app_name" />
         <activity
             android:name="com.weilay.pos.VerificationSheetActivity"
             android:label="@string/app_name"
-            android:windowSoftInputMode="stateHidden"/>
+            android:windowSoftInputMode="stateHidden" />
         <activity
             android:name="com.weilay.pos.ShiftActivity"
             android:label="@string/app_name"
-            android:windowSoftInputMode="stateHidden"/>
+            android:windowSoftInputMode="stateHidden" />
         <activity
             android:name="com.weilay.pos.MoreActivity"
-            android:label="@string/app_name"/>
+            android:label="@string/app_name" />
         <activity
             android:name="com.weilay.pos.EquipmentManagementActivity"
-            android:label="@string/app_name"/>
+            android:label="@string/app_name" />
         <activity
             android:name="com.weilay.pos.DetectionActivity"
-            android:label="@string/app_name"/>
+            android:label="@string/app_name" />
         <activity
             android:name="com.weilay.pos.NetWorkActivity"
-            android:label="@string/app_name"/>
+            android:label="@string/app_name" />
         <activity
             android:name="com.weilay.pos.NetworkTestActivity"
-            android:label="@string/app_name"/>
+            android:label="@string/app_name" />
         <activity
             android:name="com.weilay.pos.PayActivity"
-            android:label="@string/app_name"/>
+            android:label="@string/app_name" />
         <activity
             android:name="com.weilay.pos.SucceedActivity"
-            android:label="@string/app_name"/>
+            android:label="@string/app_name" />
         <activity
             android:name="com.weilay.pos.MainActivity"
-            android:label="@string/app_name"/>
+            android:label="@string/app_name" />
         <activity
             android:name="com.weilay.pos.RefundActivity"
-            android:label="@string/app_name"/>
+            android:label="@string/app_name" />
         <activity
             android:name="com.weilay.pos.SendRedPackInputActivity"
-            android:label="@string/app_name"/>
+            android:label="@string/app_name" />
         <activity
             android:name="com.weilay.pos.SendRedPackActivity"
-            android:label="@string/app_name"/>
+            android:label="@string/app_name" />
         <activity
             android:name="com.weilay.pos.MenDianActivity"
-            android:label="@string/app_name"/>
+            android:label="@string/app_name" />
         <activity
             android:name="com.weilay.pos.ShiftRecordActivity"
-            android:label="@string/app_name"/>
+            android:label="@string/app_name" />
         <activity
             android:name="com.weilay.pos.WeiLayAdvertisementActivity"
-            android:label="@string/app_name"/>
+            android:label="@string/app_name" />
         <activity
             android:name="com.weilay.pos.WiredNetWorkActivity"
-            android:label="@string/app_name"/>
+            android:label="@string/app_name" />
         <activity
             android:name="com.weilay.pos.ImportIPActivity"
-            android:label="@string/app_name"/>
+            android:label="@string/app_name" />
         <activity
             android:name="com.weilay.pos.NetWorkDeployActivity"
-            android:label="@string/app_name"/>
+            android:label="@string/app_name" />
         <activity
             android:name="com.weilay.pos.WifiActivity"
-            android:label="@string/app_name"/>
+            android:label="@string/app_name" />
         <activity
             android:name="com.weilay.pos.NetworkInfoActivity"
-            android:label="@string/app_name"/>
+            android:label="@string/app_name" />
         <activity
             android:name="com.weilay.pos.EquipmentInfoActivity"
-            android:label="@string/app_name"/>
+            android:label="@string/app_name" />
         <activity
             android:name="com.weilay.pos.KeXianTiaoShiActivity"
-            android:label="@string/app_name"/>
+            android:label="@string/app_name" />
         <activity
             android:name="com.weilay.pos.CheckOutActivity"
-            android:label="@string/app_name"/>
+            android:label="@string/app_name" />
         <activity
             android:name="com.weilay.pos.RefundPrintActivity"
-            android:label="@string/app_name"/>
+            android:label="@string/app_name" />
         <activity
             android:name="com.weilay.pos.JoinVipActivity"
-            android:label="@string/app_name"/>
+            android:label="@string/app_name" />
         <activity
             android:name="com.weilay.pos.IntegralSanActivity"
-            android:label="@string/app_name"/>
+            android:label="@string/app_name" />
         <activity
             android:name="com.weilay.pos.EquipmentState"
-            android:label="@string/app_name"/>
+            android:label="@string/app_name" />
         <activity
             android:name="com.weilay.pos.PrintSettingActivity"
-            android:label="@string/app_name"/>
-        <activity
-            android:name="com.weilay.pos.PrintSettingActivity2"
-            android:label="@string/app_name"/>
-        <activity
-            android:name="com.weilay.pos.ReceivePayActivity"
-            android:label="@string/app_name"/>
+            android:label="@string/app_name" />
+        <!--<activity-->
+            <!--android:name="com.weilay.pos.PrintSettingActivity2"-->
+            <!--android:label="@string/app_name" />-->
+        <!--<activity-->
+            <!--android:name="com.weilay.pos.ReceivePayActivity"-->
+            <!--android:label="@string/app_name" />-->
         <activity
             android:name="com.weilay.pos.PaySelectActivity2"
             android:label="@string/app_name"
-            android:launchMode="singleTask"/>
+            android:launchMode="singleTask" />
         <activity
             android:name="com.weilay.pos.SendTicketListActivity"
-            android:label="@string/app_name"/>
+            android:label="@string/app_name" />
         <activity
             android:name="com.weilay.pos.SendTicketBeginAvtivity"
-            android:label="@string/app_name"/>
+            android:label="@string/app_name" />
         <activity
             android:name="com.weilay.pos.VipInfoActivity"
-            android:label="@string/app_name"/>
+            android:label="@string/app_name" />
         <activity
             android:name="com.weilay.pos.MemberRechargeActivity"
-            android:label="@string/app_name"/>
-        <activity android:name="com.weilay.pos.AdverActivity"/>
+            android:label="@string/app_name" />
+        <activity android:name="com.weilay.pos.AdverActivity" />
         <activity
             android:name="com.weilay.pos.ZxingScanActivity"
-            android:label="@string/app_name"/>
+            android:label="@string/app_name" />
         <activity
             android:name="com.weilay.pos.SendTicketListActivity2"
-            android:label="@string/app_name"/>
+            android:label="@string/app_name" />
         <activity
             android:name="com.weilay.pos.TaskActivity"
             android:label="@string/app_name"
-            android:launchMode="singleTop"/>
+            android:launchMode="singleTop" />
         <activity
             android:name="com.weilay.pos.MessageActivity"
-            android:launchMode="singleTop"/>
+            android:launchMode="singleTop" />
         <activity
             android:name="com.weilay.pos.TestQRCodeActivity"
-            android:launchMode="singleTop"/>
-        <activity android:name="com.weilay.pos.SystemTestActivity"/>
+            android:launchMode="singleTop" />
+        <activity android:name="com.weilay.pos.SystemTestActivity" />
         <activity
             android:name="com.weilay.pos.VideoActivity"
-            android:screenOrientation="landscape"/>
+            android:screenOrientation="landscape" />
     </application>
 
 </manifest>

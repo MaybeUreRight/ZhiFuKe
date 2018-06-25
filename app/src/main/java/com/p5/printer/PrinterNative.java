@@ -20,8 +20,8 @@ public class PrinterNative {
 
 	public native int close();
 
-	static {
-		System.loadLibrary("serialPrinter");
-	}
+//	static {
+//		System.loadLibrary("serialPrinter");
+//	}
 
 }
